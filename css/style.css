@@ -60,6 +60,7 @@ body {  /*font-size por default: 16px*/
 .sidebar .playlist ol li {
   font-size: .9em;
   padding-left: 1em;
+  text-transform: capitalize;
 }
 .sidebar .playlists-frieds ul {
   list-style-type: none;
@@ -79,7 +80,6 @@ body {  /*font-size por default: 16px*/
   padding: 0 1em;
 }
 .main-video {
-  border: 1px solid blue;
   grid-area: main-video;
   margin: 0; 
 }
@@ -89,10 +89,73 @@ body {  /*font-size por default: 16px*/
   margin: 0;
 }
 .middle-content {
-  border: 1px solid purple;
   grid-area: middle-content;
+  padding: .1em 1em .7em;
+  display: flex;
+  justify-content: space-between;
+}
+.middle-content .middle-left .title {
+  font-size: 1em;
+  text-transform: capitalize;
+}
+.middle-content .middle-left .num-visitas {
+  color: gray;
+  font-size: .8em;
+}
+.middle-content .middle-left {
+  padding: .7em 0 0 0;
+}
+.middle-content .middle-left .icons {
+  display: flex;
+  margin: 0;
+  margin-top: 1em;
+}
+.middle-content .middle-left .icons button{
+  background-image: linear-gradient(to right, red ,pink);
+  border-radius: 5px;
+  /* padding: .5em; */
+  color: white;
+}
+.middle-content .middle-left .icons .icon{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-left: 1em;
+  align-items: center;
+  font-size: .8em;
+} 
+.middle-content .middle-right {
+  display: flex;
+  align-items: flex-end;
+  margin: 0;
+}
+.middle-content .middle-right button { 
+  color: white;
+  padding: .7em;
+  margin: 1em 1em 0 1em;;
+  border-radius: 15px;
+}
+.middle-content .middle-right button.purple{
+  background-color: purple;
+}
+.middle-content .middle-right button.green{
+  background-color: green;
+}
+.middle-content .middle-right button.red{
+  background-color: red;
+}
+.middle-content .middle-right button.pink{
+  background-color: palevioletred;
 }
 .botoom-content {
   border: 1px solid yellow;
   grid-area: bottom-content;
+  padding: .1em 1em .7em;
+  /* padding: 1em .5em; */
+}
+.botoom-content .comments {
+  border: 1px solid red;
+}
+.botoom-content .suggestions {
+  border: 1px solid purple;
 }
