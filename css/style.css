@@ -7,7 +7,7 @@ body {  /*font-size por default: 16px*/
 .wrapper {
   max-width: 1024px;
   display: grid;
-  grid-template: 40px 4fr 1fr 3fr / minmax(50px,200px) minmax(420px,900px);
+  grid-template: 40px 1fr 100px 1fr / minmax(50px,200px) minmax(420px,900px);
   grid-template-areas: "header header"
                        "sidebar main-video"
                        "sidebar middle-content"
@@ -93,6 +93,7 @@ body {  /*font-size por default: 16px*/
   padding: .1em 1em .7em;
   display: flex;
   justify-content: space-between;
+  box-shadow: rgb(136, 136, 136) 5px 10px 18px;
 }
 .middle-content .middle-left .title {
   font-size: 1em;
@@ -148,14 +149,39 @@ body {  /*font-size por default: 16px*/
   background-color: palevioletred;
 }
 .botoom-content {
-  border: 1px solid yellow;
   grid-area: bottom-content;
   padding: .1em 1em .7em;
-  /* padding: 1em .5em; */
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 20px;
 }
-.botoom-content .comments {
-  border: 1px solid red;
+.botoom-content .comments input {
+  width: 80%;
+  height: 20px;
+  padding: 5px 25px;
+  margin: 10px 0px;
+  background: #ece3e3 url('../images/user.svg') no-repeat left center ; 
+  background-size: 20px;
 }
-.botoom-content .suggestions {
+.botoom-content .comments .comments-other-usr {
+  display: flex;
+}
+.botoom-content .comments .comments-other-usr img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.botoom-content .comments .comments-other-usr .other-usr {
+  margin: 0;
+  margin-top: 1em;
+}
+.botoom-content .comments .comments-other-usr .other-usr .user-name,
+.botoom-content .comments .comments-other-usr .other-usr .comment {
+  margin: 5px 10px;
+}
+/* .botoom-content .suggestions {
   border: 1px solid purple;
+} */
+.botoom-content .suggestions .video {
+  margin: .5em;
 }
